@@ -18,9 +18,24 @@ header {
     background-color: #fff;
 }
 
-.logo h1 {
-    font-size: 24px;
-    color: #000000;
+.logo img {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+    transform: scale(2.0);
+    transform-origin: left center;
+}
+
+nav ul.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul.menu li {
+    margin: 0 15px;
 }
 
 nav ul {
@@ -38,10 +53,69 @@ nav ul li a {
     font-size: 16px;
 }
 
-.login a {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
+/* Tambahkan untuk menyembunyikan menu di perangkat mobile */
+nav ul {
+    display: flex;
+}
+
+nav ul.active {
+    display: flex;
+    flex-direction: column; /* Menampilkan menu dalam kolom */
+    position: absolute; /* Mengatur posisi */
+    background-color: #fff; /* Latar belakang putih */
+    width: 100%; /* Lebar penuh */
+    top: 60px; /* Jarak dari atas */
+    left: 0;
+}
+
+.hamburger {
+    display: none; /* Sembunyikan hamburger secara default */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Sembunyikan menu di perangkat mobile */
+    }
+
+    nav ul.active {
+        display: flex; /* Tampilkan menu saat aktif */
+    }
+
+    .hamburger {
+        display: flex; /* Tampilkan hamburger */
+    }
+}
+
+/* Center the logo on mobile */
+@media (max-width: 768px) {
+    .logo {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .logo img {
+        margin: 0 auto;
+    }
+    
+    nav ul.menu {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul.menu li {
+        margin: 10px 0;
+    }
 }
 
 .hero {
@@ -166,4 +240,3 @@ button {
 button:hover {
     background-color: #c5001f; 
 }
-
