@@ -1,0 +1,34 @@
+/* header.css */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: #e60023;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.login a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
