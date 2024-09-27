@@ -10,7 +10,8 @@
 :root {
     --bg-color: #222327;
     --text-color: #fff;
-    --main-color: #29fd53;
+    --main-color: #ff4d4d;
+    --grey-color: #888888;
 }
 
 body {
@@ -28,7 +29,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: transparent;
+    background: rgba(34, 34, 35, 0.9);
     padding: 28px 12%;
     transition: all 0.50s ease;
 }
