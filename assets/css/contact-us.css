@@ -7,145 +7,149 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #f7f7f7;
-}
-h1 .contact-header{
-  text-align: left;
-}
-.card {
-  margin-right: auto;
-  margin-left: 5%;
-  width:70%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  border-radius: 5px; /* 5px rounded corners */
-}
-.card-body{
-  margin-left: 10%;
-  text-align: left;
+  background-image: repeating-linear-gradient(383deg, rgb(0,0,0) 0px, rgb(0,0,0) 10px,transparent 10px, transparent 11px),repeating-linear-gradient(22.5deg, rgb(0,0,0) 0px, rgb(0,0,0) 10px,transparent 10px, transparent 11px),linear-gradient(338deg, rgb(255,255,255),rgb(255,87,87),rgb(255,0,93),rgb(255,210,0),rgb(0,101,255));
 }
 
-/* Add rounded corners to the top left and the top right corner of the image */
-img {
-  border-radius: 5px 5px 0 0;
-}
-.section-title{
-  text-align:center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-/* On mouse-over, add a deeper shadow */
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+/* Section Background Color */
+.contact-us {
+  background-image: url(../img/mountain-contour.jpg);
+  text-align: center;
 }
 
-/* Add some padding inside the card container */
-.contact-container {
-  margin-top: 50px;
-  margin: 0 auto;
-  margin: 0 auto;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-.contact-main{
-  display: flex;
-  justify-content: center; /* Center items in the container */
-  gap: 20px;
-}
-.contact-info {
-  margin-left: 10px;
-  flex: 1;
-}
-
-.contact-info h2 {
-
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.contact-info p {
-  margin-bottom: 15px;
-  font-size: 16px;
-  color: #555;
-}
-
-.contact-form-card {
-  flex: 1;
-  margin-left: 30%;
-  
-  margin-right: 15%;
-  position:relative;
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 12px;
-  border: 2px solid #000000;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Section Title */
+h2 {
+  margin-top: 40px;
+  text-align: center;
   margin-bottom: 20px;
+  transform: skew(-10deg);
+  color: #ff0000; /* Red for headings */
 }
 
-.contact-form-card:hover {
-  transform: translateY(-5px); 
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+h2 span {
+  background-color: #f4f4f4;
+  padding: 10px 10px;
 }
 
-.contact-form-card h2 {
-  margin-bottom: 15px;
-  color: #000000; /* Use the same color as the border */
+/* Contact Cards */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 40px;
+  margin-top: 20px;
 }
 
-.contact-form label {
-  display: block;
+.card {
+  background-color: #f4f4f4; /* Light grey for cards */
+  padding: 20px;
+  width: 22%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.2); /* Red shadow */
+  margin: 10px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition */
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Move the card up */
+  box-shadow: 0 8px 16px rgba(255, 0, 0, 0.4); /* Enhanced red shadow */
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #000000; /* Black for card headings */
+}
+
+/* Feedback Cards Container */
+.feedback-form-container {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 0 20px;
+  margin-bottom: 40px;
+}
+.feedback-text{
+  text-align: right;
+}
+
+.feedback-text, .feedback-form {
+  background-color: #f4f4f4; /* Light grey for feedback and form cards */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.2); /* Red shadow */
+  flex-basis: 48%;
+}
+
+.feedback-text h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ff0000; /* Red for feedback title */
+}
+
+.feedback-text p {
+  font-size: 16px;
+  color: #000000; /* Black for feedback text */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
   margin-bottom: 5px;
-  font-size: 14px;
-  color: #555;
+  font-weight: bold;
+  color: #000000; /* Black for labels */
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
+input, textarea {
   padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  border: 1px solid #ff0000; /* Red border for inputs */
   border-radius: 4px;
+  background-color: #ffffff; /* White background for inputs */
+  color: #000000; /* Black text for inputs */
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #007bff; /* Highlight form fields when focused */
+textarea {
+  resize: none;
 }
 
-.contact-form button {
-  padding: 10px 15px;
-  background-color: #007bff;
-  color: #fff;
+button {
+  padding: 12px 20px;
+  background-color: #ff0000; /* Red button background */
+  color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.contact-map{
-  display:flex;
-  margin: auto;
-  width: 100%;
-}
-.map-section iframe{
-  margin:auto;
-  width: 100%;
 }
 
-@media (max-width: 768px) {
-  .contact-container {
-    flex-direction: column;
-    width: 100%;
-    flex: 1;
-  }
+button:hover {
+  background-color: #cc0000; /* Darker red on hover */
+}
 
-  .contact-form-card {
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    flex: 1; /* Full width on smaller screens */
+/* Visit Us Section */
+.visit-us {
+  text-align: center;
+}
+
+.visit-us h2 {
+
+  color: #ff0000; /* Red for visit section title */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .card-container, .feedback-form-container {
+      flex-direction: column;
+  }
+  .feedback-text{
+    text-align: left;
+  }
+  .card, .feedback-text, .feedback-form {
+      width: 100%;
+      margin-bottom: 20px;
   }
 }
+
