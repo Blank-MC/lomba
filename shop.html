@@ -3,65 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop - PHLOX</title>
-    <link rel="stylesheet" href="assets/css/shop.css">
+    <title>Shop Page</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/header.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/shop.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
-
-<header>
-    <div class="logo">
-        <h1>PHLOX</h1>
-    </div>
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contact Us</a></li>
+    <header>
+        <a href="" class="logo"><img src="assets/img/logo.png" alt="logo" srcset=""></a>
+    
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html" class="active">Shop</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
-    </nav>
-    <div class="login">
-        <a href="#">Login</a>
-    </div>
-</header>
-
-<section class="shop-container">
-    <h2>Our Products</h2>
-    <div class="products">
-        <div class="product-card">
-            <img src="https://via.placeholder.com/250x250" alt="Product 1">
-            <h3>Product 1</h3>
-            <p>Short description of the product goes here.</p>
-            <div class="price">$50.00</div>
-            <a href="#" class="btn">Add to Cart</a>
+    
+        <div class="main">
+            <a href="" class="user"><i class="ri-user-fill"></i>Sign In</a>
+            <a href="">Register</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
         </div>
+    </header>
 
-        <div class="product-card">
-            <img src="https://via.placeholder.com/250x250" alt="Product 2">
-            <h3>Product 2</h3>
-            <p>Short description of the product goes here.</p>
-            <div class="price">$60.00</div>
-            <a href="#" class="btn">Add to Cart</a>
+    <section class="hero-banner">
+        <div class="banner-content">
+            <h1 class="animate__animated animate__fadeInDown">Discover Our Exclusive Collection</h1>
+            <p class="animate__animated animate__fadeInUp">Fashion that speaks your style. Shop now and enjoy great deals!</p>
+            <!-- <a href="#products" class="shop-now-button animate__animated animate__fadeIn">Shop Now</a> -->
         </div>
-
-        <div class="product-card">
-            <img src="https://via.placeholder.com/250x250" alt="Product 3">
-            <h3>Product 3</h3>
-            <p>Short description of the product goes here.</p>
-            <div class="price">$70.00</div>
-            <a href="#" class="btn">Add to Cart</a>
+    </section>
+    
+    <section class="shop-section" id="products">
+        <h1 class="shop-title">Shop Our Collection</h1>
+        
+        <div class="categories">
+            <div class="category">
+                <h2 class="category-title">Baju</h2>
+                <p class="category-description">Temukan koleksi baju terbaru yang memikat dan stylish.</p>
+                <div class="shop-grid">
+                    <div class="product-item" onclick="openModal('assets/img/apace.jpg', 'Red Shirt', '$29.99', 'Stylish red shirt for all occasions.')">
+                        <img src="assets/img/apace.jpg" alt="Product 1">
+                        <h2>Red Shirt</h2>
+                        <p class="price">$29.99</p>
+                        <p class="rating">⭐⭐⭐⭐⭐</p>
+                        <button class="buy-now" onclick="addToCart(event, 'Red Shirt', '$29.99')">Buy Now</button>
+                    </div>
+                    <div class="product-item" onclick="openModal('assets/img/apace.jpg', 'Blue Shirt', '$39.99', 'Elegant blue shirt for casual outings.')">
+                        <img src="assets/img/apace.jpg" alt="Product 2">
+                        <h2>Blue Shirt</h2>
+                        <p class="price">$39.99</p>
+                        <p class="rating">⭐⭐⭐⭐⭐</p>
+                        <button class="buy-now" onclick="addToCart(event, 'Blue Shirt', '$39.99')">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="category">
+                <h2 class="category-title">Celana</h2>
+                <p class="category-description">Jelajahi koleksi celana berkualitas untuk berbagai kesempatan.</p>
+                <div class="shop-grid">
+                    <div class="product-item" onclick="openModal('assets/img/apace.jpg', 'Blue Jeans', '$49.99', 'Comfortable blue jeans for everyday wear.')">
+                        <img src="assets/img/apace.jpg" alt="Product 3">
+                        <h2>Blue Jeans</h2>
+                        <p class="price">$49.99</p>
+                        <p class="rating">⭐⭐⭐⭐⭐</p>
+                        <button class="buy-now" onclick="addToCart(event, 'Blue Jeans', '$49.99')">Buy Now</button>
+                    </div>
+                    <div class="product-item" onclick="openModal('assets/img/apace.jpg', 'Black Pants', '$59.99', 'Stylish black pants for formal events.')">
+                        <img src="assets/img/apace.jpg" alt="Product 4">
+                        <h2>Black Pants</h2>
+                        <p class="price">$59.99</p>
+                        <p class="rating">⭐⭐⭐⭐⭐</p>
+                        <button class="buy-now" onclick="addToCart(event, 'Black Pants', '$59.99')">Buy Now</button>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="product-card">
-            <img src="https://via.placeholder.com/250x250" alt="Product 4">
-            <h3>Product 4</h3>
-            <p>Short description of the product goes here.</p>
-            <div class="price">$80.00</div>
-            <a href="#" class="btn">Add to Cart</a>
+    
+        <div class="modal" id="productModal">
+            <div class="modal-content">
+                <span class="close-modal" onclick="closeModal()">&times;</span>
+                <img id="modalImage" src="" alt="">
+                <h2 id="modalTitle"></h2>
+                <p id="modalDescription"></p>
+                <p class="rating">⭐⭐⭐⭐⭐</p>
+                <label for="size">Choose a size:</label>
+                <select id="size">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+                <button id="checkoutButton" onclick="checkout()">Checkout</button>
+                <button class="cancel-button" onclick="confirmCancel()">Cancel</button>
+            </div>
         </div>
-    </div>
-</section>
-
+    </section>
+    
+    
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/sweetAlert.js"></script>
+    <script src="assets/js/shop.js"></script>
 </body>
 </html>
