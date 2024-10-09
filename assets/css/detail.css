@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(../img/mountain-contour.jpeg);
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fcfcfc;
+}
+
+.product-gallery {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.product-gallery #main-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.thumbnail-gallery {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.thumbnail {
+    width: 80px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.product-details {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.product-details h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.reviews {
+    color: #000000;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 28px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.product-color, .product-size {
+    margin-bottom: 20px;
+}
+
+.color-options img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+}
+
+.size-options button {
+    padding: 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.add-to-cart {
+    padding: 15px 30px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.add-to-cart:hover {
+    background-color: #2980b9;
+}
+
+.bintang {
+    color: gold;
+}
+
+.free-delivery {
+    font-size: 14px;
+    color: #2ecc71;
+}
+
+.product-description {
+    margin-top: 30px;
+}
+
+.product-description h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.product-description p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.color-options i {
+    font-size: 30px;
+    padding: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Outline khusus untuk masing-masing warna */
+.color-options i.black {
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.color-options i.white {
+    border: 2px solid #333;
+    border-radius: 50%;
+}
+
+.color-options i.grey {
+    border: 2px solid grey;
+    border-radius: 50%;
+}
+
+/* Tambahkan efek hover */
+.color-options i:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.size-options {
+    display: flex;
+    gap: 10px; /* Jarak antara tombol */
+    margin-top: 10px;
+}
+
+.size-options button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.size-options button:hover {
+    background-color: #333;
+    color: #fff;
+    border-color: #333;
+}
+
+.size-options button.active {
+    background-color: #333;
+    color: white;
+    border-color: #333;
+}
+
