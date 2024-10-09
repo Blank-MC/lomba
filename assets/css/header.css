@@ -1,0 +1,140 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --bg-color: #222;
+    --text-color: #fff; 
+    --main-color: #888888; 
+    --grey-color: #888888;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(34, 34, 35, 0.9);
+    padding: 15px 10%;
+    transition: all 0.50s ease;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.logo span {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: 660;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 5px 15px;
+    margin: 0 10px;
+    border-bottom: 2px transparent solid;
+    transition: all 0.5s ease;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+}
+
+.navbar a.active {
+    color: var(--main-color);
+}
+
+.main {
+    display: flex;
+    align-items: center;
+}
+
+.main a {
+    margin-right: 25px;
+    margin-left: 10px;
+    color: var(--text-color);
+}
+
+.main a:hover {
+    color: var(--main-color);
+}
+
+#menu-icon {
+    font-size: 35px;
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+
+@media (max-width: 1090px) {
+    header {
+        padding: 10px 5%;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 250px;
+        background: var(--main-color);
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: all 0.50s ease;
+        display: none;
+    }
+
+    .navbar.open {
+        display: flex;
+        right: 2%;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        margin: 12px 0;
+        padding: 10px 25px;
+        transition: all 0.50s ease;
+    }
+
+    .navbar a.active {
+        color: var(--text-color);
+    }
+
+    .navbar a:hover {
+        color: var(--text-color);
+        transform: translateY(5px);
+    }
+}
