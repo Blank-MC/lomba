@@ -27,7 +27,7 @@ body {
 .order-summary, .checkout-form {
     padding: 20px;
 
-    width: 100%; /* Full width on small screens */
+    width: 100%; 
     box-sizing: border-box;
 }
 h3 {
@@ -51,7 +51,7 @@ input[type="text"], select {
 .checkout-form {
     background-color: #fff;
     flex: 1;
-    order: 2; /* Form appears below order-summary on small screens */
+    order: 2; 
 }
 .order-summary {
     background-color: #f9f9f9;
@@ -64,10 +64,10 @@ input[type="text"], select {
 .name-fields {
     display: flex;
     justify-content: space-between;
-    gap: 10px; /* Creates a gap between first and last name */
+    gap: 10px; 
 }
 .name-group {
-    flex: 0 1 calc(45%); /* Each name field takes 45% of the width */
+    flex: 0 1 calc(45%); 
 }
 .full-input {
     width: 100%;
@@ -90,13 +90,13 @@ input[type="checkbox"] {
 .card-details {
     display: flex;
     justify-content: space-between;
-    gap: 10px; /* Creates a gap between PIN and expiry date fields */
+    gap: 10px; 
 }
 .pin-group, .expiry-group {
-    flex: 0 1 calc(50%); /* PIN and expiry each take 50% width */
+    flex: 0 1 calc(50%); 
 }
 
-/* Order Summary Adjustments */
+
 
 .summary-item {
     display: flex;
@@ -134,7 +134,7 @@ input[type="checkbox"] {
     text-align: right;
     margin-top: 20px;
 }
-/* Order Summary Adjustments */
+
 
 .summary-item-accordion {
     display: flex;
@@ -173,7 +173,7 @@ input[type="checkbox"] {
     margin-top: 20px;
 }
 
-/* Button Styling */
+
 .btn {
     padding: 10px 20px;
     background-color: #007bff;
@@ -198,7 +198,7 @@ input[type="checkbox"] {
 .step.active {
     display: block;
 }
-/* Accordion Style */
+
 .accordion {
     background-color: #007bff;
     color: white;
@@ -223,31 +223,31 @@ input[type="checkbox"] {
     overflow: hidden;
     background-color: #f4f4f4;
     border: 1px solid #ccc;
-    padding: 0 15px; /* No padding initially so it hides */
+    padding: 0 15px; 
     margin-top: 10px;
     border-radius: 5px;
     transition: max-height 0.4s ease, padding 0.4s ease;
 }
 
 
-/* Responsive adjustments */
+
 @media (min-width: 768px) {
     .container {
-        flex-direction:row; /* Horizontal layout for larger screens */
+        flex-direction:row;
     }
     .checkout-form {
         width: 60%;
-        order: 1; /* Form appears on the left for larger screens */
+        order: 1;
     }
     .order-summary {
         width: 40%;
-        order: 2; /* Summary appears on the right */
+        order: 2; 
     }
 }
 
 @media (max-width: 767px) {
     .container {
-        flex-direction: column; /* Stack name fields vertically */
+        flex-direction: column;
     }
     .order-summary{
         display: none;
@@ -256,26 +256,26 @@ input[type="checkbox"] {
         width: 100%;
     }
     .name-group, .full-input {
-        width: 100%; /* Full width for name fields on small screens */
-        margin-bottom: 10px; /* Adds spacing between stacked inputs */
+        width: 100%; 
+        margin-bottom: 10px; 
     }
     .card-details {
-        flex-direction: column; /* Stack PIN and expiry fields vertically */
+        flex-direction: column; 
     }
     .pin-group, .expiry-group {
-        width: 100%; /* Full width for PIN and expiry */
+        width: 100%; 
     }
 }
-/* Responsive adjustments */
+
 @media (max-width: 767px) {
     .name-fields {
         flex-direction: column;
     }
 }
-/* Media Query for small screens */
+
 @media (max-width: 767px) {
     .order-summary {
-        display: none; /* Hide by default on small screens */
+        display: none;
     }
 
     .accordion-content.show + .order-summary {

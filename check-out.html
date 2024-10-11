@@ -8,16 +8,12 @@
     <link rel="stylesheet" href="assets/css/check-out.css">
 </head>
 <body>
-
 <div class="container">
         <img class="logo-checkout" src="assets/img/logo.png" alt="">
-    <!-- Checkout Form Section (Left) -->
     <div class="checkout-form" >
 
-    <!-- Accordion button to toggle order summary on small screens -->
     <button class="accordion">Order Summary</button>
-    
-    <!-- Accordion Content for Order Summary -->
+
     <div class="accordion-content">
         <div class="order-summary-accordion">
             <h3>Order Summary</h3>
@@ -45,16 +41,13 @@
         <div class="step active" id="step-1">
             <h3>Shipping address</h3>
             <form id="checkout-form">
-                
                 <label for="E-Mail">Email</label><br>
                 <input class="full-input" type="email" id="E-Mail" required><br><br>
                 <label for="country">Country/Region</label>
                 <select id="country" class="full-input" required>
                     <option value="" disabled selected>Select your country</option>
                     <option value="Indonesia">Indonesia</option>
-                    <!-- Add other Southeast Asian countries here -->
                 </select><br><br>
-    
                 <div class="name-fields">
                     <div class="name-group">
                         <label for="first-name">First name</label>
@@ -81,7 +74,6 @@
                         <select id="state" required>
                             <option value="" disabled selected>Select your province</option>
                             <option value="West Java">West Java</option>
-                            <!-- Add other provinces -->
                         </select>
                     </div>
                     <div class="name-group">
@@ -93,7 +85,6 @@
     
                 <label for="phone">Phone</label><br>
                 <input class="full-input" type="text" id="phone" required><br><br>
-    
                 <label for="credit-card">Credit Card Number</label><br>
                 <input class="full-input" type="text" id="credit-card" required><br><br>
     
@@ -120,8 +111,6 @@
             </div>
         </div>
 
-        <!-- Step 2 and Step 3 go here as before -->
-        <!-- Step 2: Review and Confirm -->
         <div class="step" id="step-2">
             <h3>Step 2: Review Your Information</h3>
             <p><strong>First Name:</strong> <span id="review-first-name"></span></p>
@@ -141,14 +130,12 @@
             </div>
         </div>
 
-        <!-- Step 3: Order Confirmation -->
         <div class="step" id="step-3">
             <h3>Order Confirmed!</h3>
             <p>Your order has been placed and will be processed soon.</p>
             <a href="shop.html" class="btn">Return To Shop</a>
         </div>
     </div>
-    <!-- Order Summary Section (Right) -->
     <div class="order-summary">
         <h3>Order Summary</h3>
         <div class="summary-item">
@@ -173,7 +160,7 @@
     </div>
 </div>
 
-<!-- Link to external JavaScript -->
+
 <script src="assets/js/check-out.js"></script>
 
 </body>

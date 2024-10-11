@@ -10,19 +10,19 @@ body {
   background-image: repeating-linear-gradient(383deg, rgb(24,24,26) 0px, rgb(24,24,26) 10px,transparent 10px, transparent 11px),repeating-linear-gradient(22.5deg, rgb(24,24,26) 0px, rgb(24,24,26) 10px,transparent 10px, transparent 11px),linear-gradient(338deg, rgb(110,42,42),rgb(123,0,0),rgb(225,0,0),rgb(255,185,0),rgb(255,255,255));
 }
 
-/* Section Background Color */
+
 .contact-us {
   background-image: url(../img/mountain-contour.jpg);
   text-align: center;
 }
 
-/* Section Title */
+
 h2 {
   margin-top: 40px;
   text-align: center;
   margin-bottom: 20px;
   transform: skew(-10deg);
-  color: #ff0000; /* Red for headings */
+  color: #ff0000; 
 }
 
 h2 span {
@@ -30,7 +30,7 @@ h2 span {
   padding: 10px 10px;
 }
 
-/* Contact Cards */
+
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -40,28 +40,28 @@ h2 span {
 }
 
 .card {
-  background-color: #f4f4f4; /* Light grey for cards */
+  background-color: #f4f4f4; 
   padding: 20px;
   width: 22%;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(100, 0, 0, 0.2); /* Red shadow */
+  box-shadow: 0 4px 8px rgba(100, 0, 0, 0.2); 
   margin: 10px;
   text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .card:hover {
-  transform: translateY(-10px); /* Move the card up */
-  box-shadow: 0 8px 16px rgba(119, 0, 0, 0.4); /* Enhanced red shadow */
+  transform: translateY(-10px); 
+  box-shadow: 0 8px 16px rgba(119, 0, 0, 0.4); 
 }
 
 .card h3 {
   margin-bottom: 10px;
   font-size: 18px;
-  color: #000000; /* Black for card headings */
+  color: #000000; 
 }
 
-/* Feedback Cards Container */
+
 .feedback-form-container {
   display: flex;
   justify-content: space-between;
@@ -74,22 +74,22 @@ h2 span {
 }
 
 .feedback-text, .feedback-form {
-  background-color: #f4f4f4; /* Light grey for feedback and form cards */
+  background-color: #f4f4f4;
   border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.2); /* Red shadow */
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.2);
   flex-basis: 48%;
 }
 
 .feedback-text h3 {
   font-size: 24px;
   margin-bottom: 10px;
-  color: #000000; /* Red for feedback title */
+  color: #000000; 
 }
 
 .feedback-text p {
   font-size: 16px;
-  color: #000000; /* Black for feedback text */
+  color: #000000;
 }
 
 form {
@@ -100,16 +100,16 @@ form {
 label {
   margin-bottom: 5px;
   font-weight: bold;
-  color: #000000; /* Black for labels */
+  color: #000000;
 }
 
 input, textarea {
   padding: 10px;
   margin-bottom: 20px;
-  border: 1px solid #000000; /* Red border for inputs */
+  border: 1px solid #000000; 
   border-radius: 4px;
-  background-color: #ffffff; /* White background for inputs */
-  color: #000000; /* Black text for inputs */
+  background-color: #ffffff; 
+  color: #000000;
 }
 
 textarea {
@@ -118,7 +118,7 @@ textarea {
 
 button {
   padding: 12px 20px;
-  background-color: #ff0000; /* Red button background */
+  background-color: #ff0000; 
   color: white;
   border: none;
   border-radius: 4px;
@@ -126,20 +126,20 @@ button {
 }
 
 button:hover {
-  background-color: #000000; /* Darker red on hover */
+  background-color: #000000; 
 }
 
-/* Visit Us Section */
+
 .visit-us {
   text-align: center;
 }
 
 .visit-us h2 {
 
-  color: #000000; /* Red for visit section title */
+  color: #000000;
 }
 
-/* Responsive Design */
+
 @media screen and (max-width: 768px) {
   .card-container, .feedback-form-container {
       flex-direction: column;
