@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dead Leaf Store</title>
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="" class="logo"><img src="assets/img/logo.png" alt="logo" srcset=""></a>
+    
+        <ul class="navbar">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    
+        <div class="main">
+            <a href="" class="user"><i class="ri-user-fill"></i>Sign In</a>
+            <a href="">Register</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-image">
+            <img src="assets/img/BLACK_STUDIOS_T_SHIRT_-_XS-removebg-preview.png" alt="Beats Solo Wireless">
+        </div>
+        <div class="hero-text-layer">DEAD LEAF</div> <!-- Teks ketiga -->
+    </section>
+        
+    
+
+    <section class="category">
+        <!-- Card Earphone -->
+        <div class="card">
+            <img src="assets/img/kingkong-removebg-preview.png" alt="Earphone">
+            <h3>Easy With </h3>
+            <button>Discover</button> <!-- Button dipindahkan setelah h3 -->
+        </div>
+        
+        <!-- Card Watch -->
+        <div class="card">
+            <img src="assets/img/girl_1-removebg-preview.png" alt="Watch">
+            <h3>Wear GADGET</h3>
+            <button>Discover</button> <!-- Button dipindahkan setelah h3 -->
+        </div>
+        
+        <!-- Card Laptop -->
+        <div class="card laptop-card">
+            <div class="card-content">
+                <div class="card-description">
+                    <h3>Trend Devices LAPTOP</h3>
+                    <p>Stay ahead with the latest high-performance laptops, built for productivity and gaming.</p>
+                    <button>Discover</button>
+                </div>
+                <div class="card-image">
+                    <img src="assets/img/skull-removebg-preview (1).png" alt="Laptop">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+        
+    </section>    
+
+    <section class="features">
+        <div class="feature">
+            <i class="fas fa-shipping-fast"></i>
+            <p>Free Shipping</p>
+            <p class="description">Get free shipping on all orders above $50.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-money-check-alt"></i>
+            <p>Money Guarantee</p>
+            <p class="description">30-day money-back guarantee for all purchases.</p>
+        </div>
+        <div class="divider"></div> <!-- Garis pembatas di tengah -->
+        <div class="feature">
+            <i class="fas fa-headset"></i>
+            <p>Online Support 24/7</p>
+            <p class="description">Our team is available around the clock to assist you.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-lock"></i>
+            <p>Secure Payment</p>
+            <p class="description">We provide secure and encrypted payment methods.</p>
+        </div>
+    </section>
+    
+    
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="assets/img/logo.png" alt="Logo" style="width: 150px; height: auto;">
+            </div>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </nav>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Electronic Store. <a href="terms.html">Terms</a> <a href="privacy.html">Privacy</a> <a href="cookies.html">Cookies</a></p>
+        </div>
+    </footer>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('nav ul');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
