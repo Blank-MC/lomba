@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop Page</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/header.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/shop.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="assets/css/shop.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/cart.css">
 </head>
+
 <body>
     <header>
-        <a href="" class="logo"><img src="assets/img/logo.png" alt="logo" srcset=""></a>
-    
+        <a href="" class="logo"><img src="assets/img/logo.png" alt="logo"></a>
         <ul class="navbar">
             <li><a href="index.html">Home</a></li>
             <li><a href="shop.html" class="active">Shop</a></li>
@@ -22,7 +24,6 @@
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-    
         <div class="main">
             <a href="" class="user"><i class="ri-user-fill"></i>Sign In</a>
             <a href="">Register</a>
@@ -32,82 +33,261 @@
 
     <section class="hero-banner">
         <div class="banner-content">
-            <h1 class="animate__animated animate__fadeInDown">Discover Our Exclusive Collection</h1>
-            <p class="animate__animated animate__fadeInUp">Fashion that speaks your style. Shop now and enjoy great deals!</p>
-            <!-- <a href="#products" class="shop-now-button animate__animated animate__fadeIn">Shop Now</a> -->
+            <h1>Discover Our Fashion Collection</h1>
+            <p>Shop the latest trends in Baju and Celana.</p>
         </div>
     </section>
-    
-    <section class="shop-section" id="products">
-        <h1 class="shop-title">Shop Our Collection</h1>
-        
-        <div class="categories">
-            <div class="category">
-                <h2 class="category-title">Baju</h2>
-                <p class="category-description">Temukan koleksi baju terbaru yang memikat dan stylish.</p>
-                <div class="shop-grid">
-                    <div class="product-item" onclick="openModal('assets/img/apace.jpg', 'Red Shirt', '$29.99', 'Stylish red shirt for all occasions.')">
-                        <img src="assets/img/apace.jpg" alt="Product 1">
-                        <h2>Red Shirt</h2>
-                        <p class="price">$29.99</p>
-                        <p class="rating">⭐⭐⭐⭐⭐</p>
-                        <button class="buy-now" onclick="addToCart(event, 'Red Shirt', '$29.99')">Buy Now</button>
+
+    <section class="shop-container">
+        <section class="category-filter">
+            <button class="filter-btn active" onclick="filterCategory('all')">All</button>
+            <button class="filter-btn" onclick="filterCategory('baju')">T-Shirt</button>
+            <button class="filter-btn" onclick="filterCategory('celana')">Pants</button>
+        </section>
+
+        <div class="shop">
+            <div class="shop-grid">
+                <div class="shop-card baju" data-category="baju">
+                    <div class="discount-badge">50%</div>
+                    <img src="assets/img/apace.jpg" alt="Stylish Jacket">
+                    <div class="shop-card-content">
+                        <h2>Stylish Jacket</h2>
+                        <p class="description">Trendy jacket perfect for any occasion.</p>
+                        <div class="rating-container">
+                            <div class="rating">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <p class="review-count">(300)</p>
+                        </div>
+                        <p class="original-price">Rp 450.000</p>
+                        <p class="price"></p>
+                        <a href="detail.html" class="buy-btn" onclick="saveProductDetails(this)">Order</a>
                     </div>
-                    <div class="product-item" onclick="openModal('assets/img/apace.jpg', 'Blue Shirt', '$39.99', 'Elegant blue shirt for casual outings.')">
-                        <img src="assets/img/apace.jpg" alt="Product 2">
-                        <h2>Blue Shirt</h2>
-                        <p class="price">$39.99</p>
-                        <p class="rating">⭐⭐⭐⭐⭐</p>
-                        <button class="buy-now" onclick="addToCart(event, 'Blue Shirt', '$39.99')">Buy Now</button>
+                </div>
+
+                <div class="shop-card celana" data-category="celana">
+                    <img src="assets/img/apace.jpg" alt="Classic Pants">
+                    <div class="shop-card-content">
+                        <h2>Classic Pants</h2>
+                        <p class="description">Comfortable pants for every day.</p>
+                        <div class="rating-container">
+                            <div class="rating">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-half-fill"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <p class="review-count">(200)</p>
+                        </div>
+                        <p class="price">Rp 350.000</p>
+                        <a href="detail.html" class="buy-btn" onclick="saveProductDetails(this)">Order</a>
+                    </div>
+                </div>
+
+                <div class="shop-card baju" data-category="baju">
+                    <div class="discount-badge">17%</div>
+                    <img src="assets/img/apace.jpg" alt="Elegant Dress">
+                    <div class="shop-card-content">
+                        <h2>Elegant Dress</h2>
+                        <p class="description">Perfect for formal occasions.</p>
+                        <div class="rating-container">
+                            <div class="rating">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                            </div>
+                            <p class="review-count">(500)</p>
+                        </div>
+                        <p class="original-price">Rp 650.000</p>
+                        <p class="price"></p>
+                        <a href="detail.html" class="buy-btn" onclick="saveProductDetails(this)">Order</a>
+                    </div>
+                </div>
+
+                <div class="shop-card baju" data-category="baju">
+                    <div class="discount-badge">17%</div>
+                    <img src="assets/img/apace.jpg" alt="Elegant Dress">
+                    <div class="shop-card-content">
+                        <h2>Elegant Dress</h2>
+                        <p class="description">Perfect for formal occasions.</p>
+                        <div class="rating-container">
+                            <div class="rating">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                            </div>
+                            <p class="review-count">(500)</p>
+                        </div>
+                        <p class="original-price">Rp 650.000</p>
+                        <p class="price"></p>
+                        <a href="detail.html" class="buy-btn" onclick="saveProductDetails(this)">Order</a>
+                    </div>
+                </div>
+
+                <div class="shop-card celana" data-category="celana">
+                    <img src="assets/img/apace.jpg" alt="Leather Pants">
+                    <div class="shop-card-content">
+                        <h2>Leather Pants</h2>
+                        <p class="description">Stylish leather pants for evening wear.</p>
+                        <div class="rating-container">
+                            <div class="rating">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <p class="review-count">(150)</p>
+                        </div>
+                        <p class="price">Rp 750.000</p>
+                        <a href="detail.html" class="buy-btn" onclick="saveProductDetails(this)">Order</a>
+                    </div>
+                </div>
+
+                <div class="shop-card celana" data-category="celana">
+                    <img src="assets/img/apace.jpg" alt="Classic Pants">
+                    <div class="shop-card-content">
+                        <h2>Classic Pants</h2>
+                        <p class="description">Comfortable pants for every day.</p>
+                        <div class="rating-container">
+                            <div class="rating">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-half-fill"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <p class="review-count">(200)</p>
+                        </div>
+                        <p class="price">Rp 350.000</p>
+                        <a href="detail.html" class="buy-btn" onclick="saveProductDetails(this)">Order</a>
+                    </div>
+                </div>
+
+                <div class="shop-card baju" data-category="baju">
+                    <div class="discount-badge">17%</div>
+                    <img src="assets/img/apace.jpg" alt="Elegant Dress">
+                    <div class="shop-card-content">
+                        <h2>Elegant Dress</h2>
+                        <p class="description">Perfect for formal occasions.</p>
+                        <div class="rating-container">
+                            <div class="rating">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                            </div>
+                            <p class="review-count">(500)</p>
+                        </div>
+                        <p class="original-price">Rp 650.000</p>
+                        <p class="price"></p>
+                        <a href="detail.html" class="buy-btn" onclick="saveProductDetails(this)">Order</a>
+                    </div>
+                </div>
+
+                <div class="shop-card celana" data-category="celana">
+                    <img src="assets/img/apace.jpg" alt="Leather Pants">
+                    <div class="shop-card-content">
+                        <h2>Leather Pants</h2>
+                        <p class="description">Stylish leather pants for evening wear.</p>
+                        <div class="rating-container">
+                            <div class="rating">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <p class="review-count">(150)</p>
+                        </div>
+                        <p class="price">Rp 750.000</p>
+                        <a href="detail.html" class="buy-btn" onclick="saveProductDetails(this)">Order</a>
                     </div>
                 </div>
             </div>
-    
-            <div class="category">
-                <h2 class="category-title">Celana</h2>
-                <p class="category-description">Jelajahi koleksi celana berkualitas untuk berbagai kesempatan.</p>
-                <div class="shop-grid">
-                    <div class="product-item" onclick="openModal('assets/img/apace.jpg', 'Blue Jeans', '$49.99', 'Comfortable blue jeans for everyday wear.')">
-                        <img src="assets/img/apace.jpg" alt="Product 3">
-                        <h2>Blue Jeans</h2>
-                        <p class="price">$49.99</p>
-                        <p class="rating">⭐⭐⭐⭐⭐</p>
-                        <button class="buy-now" onclick="addToCart(event, 'Blue Jeans', '$49.99')">Buy Now</button>
-                    </div>
-                    <div class="product-item" onclick="openModal('assets/img/apace.jpg', 'Black Pants', '$59.99', 'Stylish black pants for formal events.')">
-                        <img src="assets/img/apace.jpg" alt="Product 4">
-                        <h2>Black Pants</h2>
-                        <p class="price">$59.99</p>
-                        <p class="rating">⭐⭐⭐⭐⭐</p>
-                        <button class="buy-now" onclick="addToCart(event, 'Black Pants', '$59.99')">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <div class="modal" id="productModal">
-            <div class="modal-content">
-                <span class="close-modal" onclick="closeModal()">&times;</span>
-                <img id="modalImage" src="" alt="">
-                <h2 id="modalTitle"></h2>
-                <p id="modalDescription"></p>
-                <p class="rating">⭐⭐⭐⭐⭐</p>
-                <label for="size">Choose a size:</label>
-                <select id="size">
-                    <option value="S">S</option>
-                    <option value="M">M</option>
-                    <option value="L">L</option>
-                    <option value="XL">XL</option>
-                </select>
-                <button id="checkoutButton" onclick="checkout()">Checkout</button>
-                <button class="cancel-button" onclick="confirmCancel()">Cancel</button>
+            <div class="pagination">
+                <button class="pagination-btn">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">3</button>
+                <button class="pagination-btn">Next</button>
             </div>
         </div>
     </section>
-    
-    
-    <script src="assets/js/header.js"></script>
-    <script src="assets/js/sweetAlert.js"></script>
-    <script src="assets/js/shop.js"></script>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <ul>
+                    <li><a href="#">Get Support</a></li>
+                    <li><a href="#">Find a Designer</a></li>
+                    <li><a href="#">Your Account</a></li>
+                    <li><a href="#">Become an Affiliate</a></li>
+                    <li><a href="#">Privacy & Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-center">
+                <div class="footer-logo">
+                    <img src="assets/img/logo.png" alt="Logo" style="width: 100px; height: auto;">
+                </div>
+                <p>Divi Child Themes, ProPhoto 7 Designs, Showit Designs and online courses for photographers and small,
+                    creative businesses.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fas fa-rss"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <ul>
+                    <li><a href="#">All Products</a></li>
+                    <li><a href="#">Divi Child Themes</a></li>
+                    <li><a href="#">ProPhoto 7 Designs</a></li>
+                    <li><a href="#">Showit Designs</a></li>
+                    <li><a href="#">Stationery</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cart-icon" onclick="toggleSidebar()">
+        <a href="javascript:void(0)"><i class='bx bxs-cart'></i></a>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>Your Cart</h2>
+            <button class="close-btn" onclick="toggleSidebar()"><i class='bx bx-x'></i></button>
+        </div>
+        <div class="sidebar-content" id="cart-items-container">
+
+        </div>
+        <div class="sidebar-footer">
+            <div class="total-info">
+                <p>Total: <span id="total-price">Rp 0</span></p>
+                <button class="checkout-btn" onclick="checkout()">Checkout</button>
+            </div>
+        </div>
+    </div>    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="assets/js/shop.js" defer></script>
+    <script src="assets/js/header.js" defer></script>
+    <script src="assets/js/cart.js" defer></script>
 </body>
+
 </html>

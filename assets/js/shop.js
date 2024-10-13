@@ -1,25 +1,52 @@
-function openModal(image, title, price, description) {
-    document.getElementById('modalImage').src = image;
-    document.getElementById('modalTitle').textContent = title;
-    document.getElementById('modalDescription').textContent = description;
-    document.getElementById('productModal').style.display = 'flex';
+function filterCategory(category) {
+    const shopCards = document.querySelectorAll('.shop-card');
+    shopCards.forEach(card => {
+        if (category === 'all') {
+            card.style.display = 'block';
+        } else {
+            card.classList.contains(category) ? card.style.display = 'block' : card.style.display = 'none';
+        }
+    });
+
+    const buttons = document.querySelectorAll('.filter-btn');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
 }
 
-function closeModal() {
-    document.getElementById('productModal').style.display = 'none';
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.shop-card');
 
-function checkout() {
-    alert("Your order has been added to the cart.");
-}
+    cards.forEach(card => {
+        const discountBadge = card.querySelector('.discount-badge');
+        const originalPriceElement = card.querySelector('.original-price');
+        const priceElement = card.querySelector('.price');
 
-function confirmCancel() {
-    if (confirm("Are you sure you want to cancel the order?")) {
-        closeModal();
-    }
-}
+        if (discountBadge) {
+            const discountPercentage = parseInt(discountBadge.textContent.replace('%', ''));
+            const originalPrice = parseFloat(originalPriceElement.textContent.replace('Rp ', '').replace(',', ''));
 
-function addToCart(event, title, price) {
-    event.stopPropagation();
-    alert(`Added ${title} to cart for ${price}.`);
+            const discountedPrice = originalPrice - (originalPrice * (discountPercentage / 100));
+            priceElement.textContent = `Rp ${discountedPrice.toFixed(3).replace('.', '.')}`;
+        }
+    });
+});
+
+function saveProductDetails(element) {
+    const productCard = element.closest('.shop-card');
+    
+    const productImage = productCard.querySelector('img').src;
+    const productName = productCard.querySelector('h2').textContent;
+    const productPrice = productCard.querySelector('.price').textContent || productCard.querySelector('.original-price').textContent;
+    const productDescription = productCard.querySelector('.description').textContent;
+    const reviewCount = productCard.querySelector('.review-count').textContent.replace(/[()]/g, '');
+
+    const ratingStars = productCard.querySelectorAll('.rating i.ri-star-fill');
+    const rating = ratingStars.length;
+
+    localStorage.setItem('productImage', productImage);
+    localStorage.setItem('productName', productName);
+    localStorage.setItem('productPrice', productPrice);
+    localStorage.setItem('productDescription', productDescription);
+    localStorage.setItem('productRating', rating);
+    localStorage.setItem('reviewCount', reviewCount);
 }

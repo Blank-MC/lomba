@@ -1,27 +1,16 @@
-function openModal(imageSrc, title, price) {
-    document.getElementById('modalImage').src = imageSrc;
-    document.getElementById('modalTitle').innerText = title;
-    document.getElementById('modalPrice').innerText = price;
-    document.getElementById('productModal').style.display = 'flex';
-}
+document.getElementById('add-to-cart').addEventListener('click', function () {
+    const productName = document.getElementById('product-name').innerText;
+    const productPrice = document.getElementById('product-price').innerText;
+    const productImage = document.getElementById('product-image').src;
 
-function closeModal() {
-    document.getElementById('productModal').style.display = 'none';
-}
-
-function addToCart(event, title, price) {
-    event.stopPropagation();
     Swal.fire({
-        title: 'Item Added to Cart',
-        text: `${title} has been added to your cart for ${price}.`,
+        title: 'Added to Cart!',
+        text: `${productName} has been added to your cart.`,
         icon: 'success',
-        confirmButtonText: 'Continue Shopping',
-        showCancelButton: true,
-        cancelButtonText: 'Checkout'
+        confirmButtonText: 'Ok'
     }).then((result) => {
         if (result.isConfirmed) {
-        } else if (result.isDismissed) {
-            Swal.fire('Checkout', 'Proceeding to checkout...', 'info');
+            addToCart(productName, productPrice, productImage);
         }
     });
-}
+});
