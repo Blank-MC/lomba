@@ -72,12 +72,6 @@ header {
     align-items: center;
 }
 
-.main a {
-    margin-right: 25px;
-    margin-left: 10px;
-    color: var(--text-color);
-}
-
 .main a:hover {
     color: var(--main-color);
 }
