@@ -1,0 +1,163 @@
+
+body {
+    font-family: 'Roboto', sans-serif; 
+}
+
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 600px;
+    background-color: #EEEEEE;
+}
+
+.hero-content {
+    z-index: 1;
+    max-width: 50%;
+    color: black;
+}
+
+.hero-content h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.hero-content h1, .hero-content button, .hero-content p {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 10px 0;
+    color: black;
+}
+
+.hero-content button {
+    margin-top: 20px;
+    padding: 10px 25px;
+    font-size: 1rem;
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero-content button:hover {
+    background-color: #c70000;
+}
+
+.hero-content p {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: grey;
+}
+
+.hero-image {
+    position: relative;
+    z-index: 0;
+    left: 72%;
+    bottom: 6.7%;
+    max-width: 50%;
+    text-align: right;
+}
+
+.hero-image img {
+    width: 550px;
+    height: auto;
+}
+
+.hero::before {
+    content: "CONTACT US";
+    position: absolute;
+    top: 34%; 
+    left: 20%;
+    font-size: 8rem;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.7);
+    transform: translateY(-50%);
+    white-space: nowrap;
+}
+
+.hero::after {
+    content: "CONTACT US";
+    position: absolute;
+    top: 50%; 
+    left: 20%;
+    font-size: 8rem;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.5); 
+    transform: translateY(-50%);
+    white-space: nowrap;
+}
+
+.hero-text-layer {
+    position: absolute;
+    top: 66%; 
+    left: 20%;
+    font-size: 8rem;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.3);
+    transform: translateY(-50%);
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        justify-content: center; 
+        padding: 0 20px; 
+        height: auto; 
+        position: relative;
+    }
+
+    .hero-content {
+        display: none; 
+    }
+
+    .hero-image {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        max-width: 100%; 
+        text-align: center; 
+        z-index: 2; 
+    }
+
+    .hero-image img {
+        width: 100%; 
+        height: auto;
+    }
+
+    .hero::before {
+        display: block;
+        top: 13%; 
+        left: 16%; 
+        font-size: 3rem; 
+        color: rgba(0, 0, 0, 0.5); 
+        z-index: 1; 
+        position: absolute; 
+    }
+
+    .hero::after {
+        display: block;
+        top: 25%; 
+        left: 16%; 
+        font-size: 3rem;
+        color: rgba(0, 0, 0, 0.3); 
+        z-index: 1; 
+        position: absolute;
+    }
+
+    .hero-text-layer {
+        display: block;
+        position: absolute;
+        top: 37%; 
+        left: 16%;
+        font-size: 3rem;
+        font-weight: 700;
+        color: rgba(0, 0, 0, 0.1); 
+        z-index: 1; 
+        white-space: nowrap;
+    }
+}
