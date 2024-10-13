@@ -44,7 +44,7 @@ function addToCart(productName, productPrice, productImage) {
 function updateCartUI() {
     cartItemsContainer.innerHTML = '';
     if (cartItems.length === 0) {
-        cartItemsContainer.innerHTML = '<p>Keranjang Anda kosong.</p>';
+        cartItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
     } else {
         cartItems.forEach((item, index) => {
             const cartItemDiv = document.createElement('div');

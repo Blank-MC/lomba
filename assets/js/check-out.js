@@ -16,7 +16,7 @@ function displayCartItems() {
     orderItemsContainer.innerHTML = '';
 
     if (cartItems.length === 0) {
-        orderItemsContainer.innerHTML = '<p>Keranjang Anda kosong.</p>';
+        orderItemsContainer.innerHTML = '<p>Your cart is empty</p>';
     } else {
         let totalPrice = 0;
 

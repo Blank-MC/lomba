@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,51 +9,54 @@
     <link rel="stylesheet" href="assets/css/home.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/cart.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </head>
+
 <body>
     <header>
         <a href="" class="logo"><img src="assets/img/logo.png" alt="logo" srcset=""></a>
-    
+
         <ul class="navbar">
-            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="home.html" class="active">Home</a></li>
             <li><a href="shop.html">Shop</a></li>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact-us.html">Contact</a></li>
         </ul>
-    
+
         <div class="main">
             <a href="" class="user"><i class="ri-user-fill"></i>Sign In</a>
             <a href="">Register</a>
             <div class="bx bx-menu" id="menu-icon"></div>
         </div>
     </header>
-    
+
     <section class="hero">
         <div class="hero-image">
             <img src="assets/img/banner.png" alt="Beats Solo Wireless">
         </div>
-        <div class="hero-text-layer">DEAD LEAF</div> 
+        <div class="hero-text-layer">DEAD LEAF</div>
     </section>
-        
-    
+
+
 
     <section class="category">
-        
+
         <div class="card">
             <img src="assets/img/kong.png" alt="Earphone">
             <h3>Easy With </h3>
-            <button>Discover</button> 
+            <button>Discover</button>
         </div>
-        
-        
+
+
         <div class="card">
             <img src="assets/img/cewwek.png" alt="Watch">
             <h3>Wear GADGET</h3>
-            <button>Discover</button> 
+            <button>Discover</button>
         </div>
-        
+
 
         <div class="card laptop-card">
             <div class="card-content">
@@ -67,9 +71,9 @@
             </div>
         </div>
     </section>
-    
-        
-    </section>    
+
+
+    </section>
 
     <section class="features">
         <div class="feature">
@@ -82,7 +86,7 @@
             <p>Money Guarantee</p>
             <p class="description">30-day money-back guarantee for all purchases.</p>
         </div>
-        <div class="divider"></div> 
+        <div class="divider"></div>
         <div class="feature">
             <i class="fas fa-headset"></i>
             <p>Online Support 24/7</p>
@@ -94,8 +98,6 @@
             <p class="description">We provide secure and encrypted payment methods.</p>
         </div>
     </section>
-    
-    <!-- nanti ini tolong hapus ja -->
 
     <footer>
         <div class="footer-container">
@@ -104,12 +106,10 @@
             </div>
             <nav class="footer-nav">
                 <ul>
+                    <li><a href="home.html">Home</a></li>
                     <li><a href="shop.html">Shop</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li><a href="terms.html">Terms</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="support.html">Support</a></li>
                 </ul>
             </nav>
             <div class="footer-social">
@@ -120,22 +120,32 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Electronic Store. <a href="terms.html">Terms</a> <a href="privacy.html">Privacy</a> <a href="cookies.html">Cookies</a></p>
+            <p>&copy; 2024 Deadleaf</p>
         </div>
     </footer>
-    <script>
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('nav ul');
 
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
+    <div class="cart-icon" onclick="toggleSidebar()">
+        <a href="javascript:void(0)"><i class='bx bxs-cart'></i></a>
+    </div>
 
-        document.addEventListener('click', (event) => {
-            if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
-                navMenu.classList.remove('active');
-            }
-        });
-    </script>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>Your Cart</h2>
+            <button class="close-btn" onclick="toggleSidebar()"><i class='bx bx-x'></i></button>
+        </div>
+        <div class="sidebar-content" id="cart-items-container">
+
+        </div>
+        <div class="sidebar-footer">
+            <div class="total-info">
+                <p>Total: <span id="total-price">Rp 0</span></p>
+                <button class="checkout-btn" onclick="checkout()">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/cart.js"></script>
 </body>
+
 </html>
