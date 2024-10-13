@@ -66,21 +66,6 @@ function prevStep(step) {
     }
 }
 
-function cancelCheckout() {
-    Swal.fire({
-        title: 'Apakah Anda yakin?',
-        text: "Anda akan membatalkan checkout!",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonText: 'Ya, batalkan!',
-        cancelButtonText: 'Tidak'
-    }).then((result) => {
-        if (result.isConfirmed) {
-            window.location.href = 'shop.html';
-        }
-    });
-}
-
 function updateReviewInfo() {
     document.getElementById('review-first-name').textContent = document.getElementById('first-name').value || '-';
     document.getElementById('review-last-name').textContent = document.getElementById('last-name').value || '-';

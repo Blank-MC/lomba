@@ -14,3 +14,18 @@ document.getElementById('add-to-cart').addEventListener('click', function () {
         }
     });
 });
+
+function cancelCheckout() {
+    Swal.fire({
+        title: 'Apakah Anda yakin?',
+        text: "Anda akan membatalkan checkout!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Ya, batalkan!',
+        cancelButtonText: 'Tidak'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.href = 'shop.html';
+        }
+    });
+}
