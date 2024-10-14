@@ -5,6 +5,7 @@
 }
 
 body {
+  overflow-x: hidden;
   font-family: Arial, sans-serif;
   line-height: 1.6;
   background-image: repeating-linear-gradient(383deg, rgb(24,24,26) 0px, rgb(24,24,26) 10px,transparent 10px, transparent 11px),repeating-linear-gradient(22.5deg, rgb(24,24,26) 0px, rgb(24,24,26) 10px,transparent 10px, transparent 11px),linear-gradient(338deg, rgb(110,42,42),rgb(123,0,0),rgb(225,0,0),rgb(255,185,0),rgb(255,255,255));
