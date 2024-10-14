@@ -191,7 +191,6 @@
     border-radius: 25px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-
 }
 
 .buy-btn:hover {
