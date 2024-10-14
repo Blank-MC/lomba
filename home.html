@@ -39,63 +39,103 @@
     
 
     <section class="category">
-        
+        <!-- Card 1 -->
         <div class="card">
             <img src="assets/img/kong.png" alt="Earphone">
-            <h3>Easy With </h3>
-            <button>Discover</button> 
+            <h3>Cool motifs</h3>
+            <button>Discover</button>
         </div>
-        
-        
+    
+        <!-- Card 2 -->
         <div class="card">
             <img src="assets/img/cewwek.png" alt="Watch">
-            <h3>Wear GADGET</h3>
-            <button>Discover</button> 
+            <h3>comfortable material</h3>
+            <button>Discover</button>
         </div>
-        
-
+    
+        <!-- Card 3 -->
         <div class="card laptop-card">
             <div class="card-content">
+                <!-- Deskripsi -->
                 <div class="card-description">
-                    <h3>Trend Devices LAPTOP</h3>
-                    <p>Stay ahead with the latest high-performance laptops, built for productivity and gaming.</p>
+                    <h3>DEADLEAF APPAREL</h3>
+                    <p>Keep up with the times and wear DEADLEAF</p>
                     <button>Discover</button>
                 </div>
+                <!-- Gambar -->
                 <div class="card-image">
                     <img src="assets/img/tengkorak.png" alt="Laptop">
                 </div>
             </div>
         </div>
+    
+
+        
     </section>
     
+            <!-- Wide Card -->
+            <div class="wide-card">
+                <!-- Gambar di kiri -->
+                <div class="wide-card-image">
+                    <img src="assets/img/jok.jpg" alt="Wide Image">
+                </div>
+                <!-- Deskripsi di kanan -->
+                <div class="wide-card-description">
+                    <h3>"Deadleaf"</h3>
+                    <br>
+                    <p>Asal usul nama "Deadleaf" terinspirasi dari jenis kupu-kupu yang dikenal sebagai "Deadleaf Butterfly." 
+                        Kupu-kupu ini memiliki kemampuan unik untuk menyamarkan diri dengan bentuk dan warna yang menyerupai daun mati, 
+                        sehingga sulit terlihat di alam sekitarnya. Nama ini dipilih karena mencerminkan keindahan yang tersembunyi dan kekuatan transformasi, 
+                        yang selaras dengan visi brand Deadleaf untuk menciptakan pakaian yang tidak hanya menarik secara visual, 
+                        tetapi juga memiliki nilai artistik dan makna mendalam bagi pemakainya. </p>
+                    <button>Learn More</button>
+                </div>
+            </div>
+            
         
     </section>    
 
-    <section class="features">
-        <div class="feature">
-            <i class="fas fa-shipping-fast"></i>
-            <p>Free Shipping</p>
-            <p class="description">Get free shipping on all orders above $50.</p>
-        </div>
-        <div class="feature">
-            <i class="fas fa-money-check-alt"></i>
-            <p>Money Guarantee</p>
-            <p class="description">30-day money-back guarantee for all purchases.</p>
-        </div>
-        <div class="divider"></div> 
-        <div class="feature">
-            <i class="fas fa-headset"></i>
-            <p>Online Support 24/7</p>
-            <p class="description">Our team is available around the clock to assist you.</p>
-        </div>
-        <div class="feature">
-            <i class="fas fa-lock"></i>
-            <p>Secure Payment</p>
-            <p class="description">We provide secure and encrypted payment methods.</p>
-        </div>
-    </section>
+    <div class="features-container">
+        <section class="features">
+  
+                <div class="feature card">
+                    <i class="fas fa-shipping-fast"></i>
+                    <div>
+                        <p>Free Shipping</p>
+                        <p class="description">Get free shipping on all orders above $50.</p>
+                    </div>
+                </div>
+                <div class="feature card">
+                    <i class="fas fa-money-check-alt"></i>
+                    <div>
+                        <p>Money Guarantee</p>
+                        <p class="description">30-day money-back guarantee for all purchases.</p>
+                    </div>
+                </div>
+        
     
-    <!-- nanti ini tolong hapus ja -->
+  
+                <div class="feature card">
+                    <i class="fas fa-headset"></i>
+                    <div>
+                        <p>Online Support 24/7</p>
+                        <p class="description">Our team is available around the clock to assist you.</p>
+                    </div>
+                </div>
+                <div class="feature card">
+                    <i class="fas fa-lock"></i>
+                    <div>
+                        <p>Secure Payment</p>
+                        <p class="description">We provide secure and encrypted payment methods.</p>
+                    </div>
+                </div>
+            
+        </section>
+    </div>
+    
+
+    
+    </div>
 
     <footer>
         <div class="footer-container">
@@ -123,19 +163,7 @@
             <p>&copy; 2024 Electronic Store. <a href="terms.html">Terms</a> <a href="privacy.html">Privacy</a> <a href="cookies.html">Cookies</a></p>
         </div>
     </footer>
-    <script>
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('nav ul');
 
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-
-        document.addEventListener('click', (event) => {
-            if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
-                navMenu.classList.remove('active');
-            }
-        });
-    </script>
+    <script src="assets/js/scroll.js"></script>
 </body>
 </html>
