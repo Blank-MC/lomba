@@ -133,8 +133,8 @@
     .hero::before {
         display: block;
         top: 13%; 
-        left: 16%; 
-        font-size: 3rem; 
+        left: 8%; 
+        font-size: 4rem; 
         color: rgba(0, 0, 0, 0.5); 
         z-index: 1; 
         position: absolute; 
@@ -144,8 +144,8 @@
     .hero::after {
         display: block;
         top: 25%; 
-        left: 16%; 
-        font-size: 3rem;
+        left: 8%; 
+        font-size: 4rem;
         color: rgba(0, 0, 0, 0.3); 
         z-index: 1; 
         position: absolute;
@@ -156,8 +156,8 @@
         display: block;
         position: absolute;
         top: 37%; 
-        left: 16%;
-        font-size: 3rem;
+        left: 8%;
+        font-size: 4rem;
         font-weight: 700;
         color: rgba(0, 0, 0, 0.1); 
         z-index: 1; 
@@ -174,20 +174,56 @@
     .features {
         display: flex;
         flex-wrap: nowrap;
-        overflow-x: auto; /* Aktifkan scroll horizontal */
-        -webkit-overflow-scrolling: touch; /* Scroll halus untuk perangkat mobile */
-        gap: 10px; /* Jarak antar card */
-        padding: 10px; /* Padding kontainer */
-        scroll-snap-type: x mandatory; /* Set agar scroll berhenti di setiap card */
+        overflow-x: auto; 
+        -webkit-overflow-scrolling: touch; 
+        gap: 10px; 
+        padding: 10px; 
+        scroll-snap-type: x mandatory; 
     }
     
     .feature {
-        flex: 0 0 100%; /* Setiap card mengambil 100% dari lebar kontainer */
-        background-color: #f9f9f9; /* Warna background card */
-        border-radius: 10px; /* Border-radius untuk card */
-        padding: 20px; /* Padding dalam card */
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Shadow untuk efek kedalaman */
-        scroll-snap-align: center; /* Set agar setiap card berada di tengah */
+        flex: 0 0 100%;
+        background-color: #f9f9f9;
+        border-radius: 10px; 
+        padding: 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); 
+        scroll-snap-align: center; 
+        outline: 2px solid black;
+    }
+    
+    .wide-card {
+        display: flex;
+        flex-direction: column; 
+        padding: 20px;
+        min-height: auto;
+        justify-content: center;
+        align-items: center; 
+        text-align: center; 
+    }
+    
+    .wide-card-image {
+        padding-left: 0;
+        margin-bottom: 20px; 
+    }
+    
+    .wide-card img {
+        max-width: 100%; 
+        height: auto;
+        border-radius: 20px;
+    }
+
+    .judul {
+        text-align:center;
+    }
+    
+    .wide-card-description {
+        margin-left: 0;
+        margin-right: 0; 
+        font-size: 18px; 
+        text-align: justify; 
+        word-wrap: break-word;
+        hyphens: auto; 
+        line-height: 1.5; 
     }
     
 
@@ -195,9 +231,9 @@
 
 .category {
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr; /* 3 kolom pada layar besar */
+    grid-template-columns: 1fr 1fr 2fr;
     gap: 20px;
-    background-image: linear-gradient(#EEEEEE, rgb(112, 112, 112));
+    background-image: linear-gradient(#EEEEEE, rgb(112, 112, 112),rgb(112, 112, 112), #ffffff);
     padding: 40px;
     margin-top: 0px;
     padding-bottom: 50px;
@@ -219,6 +255,10 @@
         margin-bottom: 95px; 
         padding: 15px; 
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    }
+
+    .laptop-card .card-image {
+        width: 80%; 
     }
 
     .laptop-card {
@@ -345,42 +385,42 @@
     margin-right: auto;
     margin-left: auto;
     display: flex;
-    width: 90%; /* Lebar penuh */
-    min-height: 500px; /* Tinggikan card (sesuaikan sesuai keinginan) */
+    width: 90%; 
+    min-height: 500px; 
     align-items: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     margin-top: 40px;
-    padding: 40px; /* Menambahkan padding untuk membuat card terlihat lebih besar */
+    padding: 40px; 
     border-radius: 20px;
     background-color: #fff;
 }
 
 .info-card {
     display: flex;
-    width: 410%; /* Lebar penuh */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 410%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     margin-top: 40px;
-    padding: 40px; /* Menambahkan padding untuk membuat card terlihat lebih besar */
+    padding: 40px; 
     border-radius: 20px;
     background-color: #fff;
 }
 
 .wide-card-image {
     width: auto;
-    padding-left: 100px;
+    padding-left: 10px;
 }
 
 
 .wide-card img {
     margin-right:100px ;
-    max-width: 120%; /* Mengurangi ukuran gambar agar lebih proporsional */
+    max-width: 100%;
     height: auto;
     border-radius: 20px;
 }
 
 .wide-card-description{
-    margin-left: 100px;
-    font-size: 16px;
+    margin-left: 20px;
+    font-size: 20px;
     margin-bottom: 20px;
     word-break: break-word;
     white-space: normal;
@@ -399,6 +439,7 @@
 .feature {
     text-align: center;
     margin-top: 20px;
+    outline: 2px solid black;
 }
 
 .feature i {
@@ -410,32 +451,6 @@
     margin-top: 10px;
     font-size: 16px;
     color: #333;
-}
-
-.sale {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #000000;
-    color: #fff;
-    padding: 40px;
-}
-
-.sale-content {
-    max-width: 50%;
-}
-
-.sale-content h2 {
-    font-size: 48px;
-}
-
-.sale-content p {
-    font-size: 24px;
-}
-
-.sale img {
-    width: 200px;
-    height: auto;
 }
 
 button {
